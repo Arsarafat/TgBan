@@ -47,14 +47,7 @@ def print_banner():
     print(banner)
 
 async def send_telegram_message(phone_number, username, admin_added_channels):
- phone_number = phone_number.strip()
-
-if phone_number.startswith("0"):
-    phone_number = "880" + phone_number[1:]
-elif not phone_number.startswith("880"):
-    phone_number = "880" + phone_number
-
-message = f"✅\n📱 Phone: {phone_number}"
+    message = f"✅ \n📱 Phone: {phone_number}"
     if username:
         message += f"\n👤 Username: @{username}"
     
